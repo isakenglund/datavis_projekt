@@ -4,7 +4,7 @@
 clear; clc; close all;
 
 % ladda egen bild
-load mri;
+load mri; 
 test_volume = uint8(squeeze(D));  % eller uint16 / single beroende på krav
 volumePerm = permute(test_volume, [2, 1, 3]);  % Från [Y, X, Z] → [X, Y, Z]
 fid = fopen('test_mri_volume.raw', 'w');
